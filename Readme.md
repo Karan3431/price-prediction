@@ -53,19 +53,6 @@ The LSTM model is designed to predict future prices based on historical data.
 - Trained using a sequential model from Keras.  
 - The dataset is split into training and testing sets, with early stopping implemented to prevent overfitting.  
 - Model: "sequential"
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┓
-┃ Layer (type)                         ┃ Output Shape                ┃         Param # ┃
-┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━┩
-│ lstm (LSTM)                          │ (None, 30, 50)              │          10,400 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ dropout (Dropout)                    │ (None, 30, 50)              │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ lstm_1 (LSTM)                        │ (None, 50)                  │          20,200 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ dropout_1 (Dropout)                  │ (None, 50)                  │               0 │
-├──────────────────────────────────────┼─────────────────────────────┼─────────────────┤
-│ dense (Dense)                        │ (None, 1)                   │              51 │
-└──────────────────────────────────────┴─────────────────────────────┴─────────────────┘
  Total params: 30,651 (119.73 KB)
  Trainable params: 30,651 (119.73 KB)
  Non-trainable params: 0 (0.00 B)
